@@ -47,7 +47,10 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
+    theme = "catppuccin-mocha";
   };
+
+  environment.systemPackages = [ pkgs.catppuccin-sddm ];
 
   # Audio
   services.pipewire = {
