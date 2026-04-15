@@ -43,12 +43,45 @@
   programs.fish = {
     enable = true;
     shellAliases = {
-      rebuild = "sudo nixos-rebuild switch --flake $HOME/nixos-config#nixos-personal";
-      editsys = "$EDITOR $HOME/nixos-config/configuration.nix";
+      editsys  = "$EDITOR $HOME/nixos-config/configuration.nix";
       edithome = "$EDITOR $HOME/nixos-config/home.nix";
       editflake = "$EDITOR $HOME/nixos-config/flake.nix";
       edithypr = "$EDITOR $HOME/nixos-config/hyprland.conf";
-      sysupdate = "nix flake update $HOME/nixos-config && sudo nixos-rebuild switch --flake $HOME/nixos-config#nixos-personal";
+    };
+    functions = {
+      rebuild = {
+        description = "Commit config, rebuild NixOS, push if successful";
+        body = ''
+          cd $HOME/nixos-config
+          git add -A
+          if not git diff --cached --quiet
+            git commit -m "rebuild: "(date '+%Y-%m-%d %H:%M')
+          end
+          sudo nixos-rebuild switch --flake $HOME/nixos-config#nixos-personal
+          and begin
+            if git remote | string length -q
+              git push
+            end
+          end
+        '';
+      };
+      sysupdate = {
+        description = "Update flake inputs, rebuild, commit and push";
+        body = ''
+          cd $HOME/nixos-config
+          nix flake update
+          git add flake.lock
+          if not git diff --cached --quiet
+            git commit -m "flake: update inputs "(date '+%Y-%m-%d %H:%M')
+          end
+          sudo nixos-rebuild switch --flake $HOME/nixos-config#nixos-personal
+          and begin
+            if git remote | string length -q
+              git push
+            end
+          end
+        '';
+      };
     };
   };
 
