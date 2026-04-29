@@ -27,6 +27,7 @@
     nerd-fonts.jetbrains-mono
     waybar
     bolt-launcher
+    lutris
   ];
 
   home.sessionVariables = {
