@@ -140,5 +140,6 @@
   # boot.consoleLogLevel = 1;
   # boot.kernelParams = [ "quiet" ];
 
+  system.stateVersion = "25.11";
 }
 
