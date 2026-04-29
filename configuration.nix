@@ -12,6 +12,13 @@
   # Allow installation of non-free packages
   nixpkgs.config.allowUnfree = true;
 
+  # openldap 2.6.13 has a flaky syncrepl test that fails in the Nix sandbox
+  nixpkgs.overlays = [
+    (final: prev: {
+      openldap = prev.openldap.overrideAttrs (_: { doCheck = false; });
+    })
+  ];
+
   #Nvidia settings for hyprland
   hardware.nvidia = {
     modesetting.enable = true;
