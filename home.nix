@@ -56,10 +56,12 @@
           cd $HOME/nixos-config
           git add -A
           if not git diff --cached --quiet
-            git commit -m "rebuild: "(date '+%Y-%m-%d %H:%M')
+            set commit_msg (test -n "$argv[1]"; and echo $argv[1]; or echo "rebuild: "(date '+%Y-%m-%d %H:%M'))
+            git commit -m $commit_msg
           end
           sudo nixos-rebuild switch --flake $HOME/nixos-config#nixos-personal
           and begin
+            pkill hyprlauncher
             if git remote | string length -q
               git push
             end
