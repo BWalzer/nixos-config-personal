@@ -128,8 +128,8 @@
   };
 
   # Quiet the Kernel messages on original install
-  boot.consoleLogLevel = 1;
-  boot.kernelParams = [ "quiet" ];
+  # boot.consoleLogLevel = 1;
+  # boot.kernelParams = [ "quiet" ];
 
 }
 
