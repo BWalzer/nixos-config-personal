@@ -27,7 +27,6 @@
     nerd-fonts.jetbrains-mono
     waybar
     bolt-launcher
-    lutris
   ];
 
   home.sessionVariables = {
@@ -87,6 +86,14 @@
         '';
       };
     };
+  };
+
+
+  hardware.graphics.enable32Bit = true;
+  programs.lutris = {
+    enable = true;
+    extraPackages = with pkgs; [ winetricks mangohud gamemode ];
+    protonPackages = with pkgs; [ proton-ge-bin ];
   };
 
   services.mako = {
