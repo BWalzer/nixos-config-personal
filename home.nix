@@ -89,7 +89,6 @@
   };
 
 
-  hardware.graphics.enable32Bit = true;
   programs.lutris = {
     enable = true;
     extraPackages = with pkgs; [ winetricks mangohud gamemode ];

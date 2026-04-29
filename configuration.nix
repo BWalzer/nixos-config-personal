@@ -127,6 +127,8 @@
     shell = pkgs.fish;
   };
 
+  hardware.graphics.enable32Bit = true;
+
   # Quiet the Kernel messages on original install
   # boot.consoleLogLevel = 1;
   # boot.kernelParams = [ "quiet" ];
