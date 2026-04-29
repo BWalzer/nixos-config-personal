@@ -26,7 +26,7 @@
     brightnessctl
     nerd-fonts.jetbrains-mono
     waybar
-    runelite 
+    bolt-launcher
   ];
 
   home.sessionVariables = {
