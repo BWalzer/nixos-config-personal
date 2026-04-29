@@ -26,6 +26,7 @@
     brightnessctl
     nerd-fonts.jetbrains-mono
     waybar
+    runelite 
   ];
 
   home.sessionVariables = {
