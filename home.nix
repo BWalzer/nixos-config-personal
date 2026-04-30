@@ -34,7 +34,7 @@
     enable = true;
     settings = [{
       modules-left = [ "clock" ];
-      modules-center = [ "hyprland/workspaces" ];
+      modules-center = [ "hyprland/workspaces" "wlr/taskbar" ];
       clock = {
         "format" = "{:%A, %B %e - %H:%M}"; # Ex. Thursday, November 12 - 14:02 PST
         "tooltip-format" = "<tt>{calendar}</tt>";
