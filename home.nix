@@ -5,10 +5,6 @@
 
   home.file.".config/hypr/hyprland.conf".source = ./hyprland.conf;
   home.file.".config/nvim".source = ./nvim;
-  home.file.".config/waybar/config".source = ./waybar/config;
-  home.file.".config/waybar/style.css".source = ./waybar/style.css;
-  home.file.".config/waybar/theme.css".source = ./waybar/theme.css;
-  home.file.".config/waybar/user-style.css".source = ./waybar/user-style.css;
 
   home.packages = with pkgs; [
     chromium
