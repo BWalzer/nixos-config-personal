@@ -30,6 +30,8 @@
     EDITOR = "nvim";
   };
 
+  programs.waybar.enable = true;
+
   programs.ghostty = {
     enable = true;
   };
