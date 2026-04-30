@@ -50,7 +50,8 @@
       "hyprland/workspaces" = {
 	"active-only" = false;
         format = "{id} {windows}";
-	"window-rewrite-default" = "{class}";
+	# "window-rewrite-default" = "{class}";
+
       };
 
       "wlr/taskbar" = {
