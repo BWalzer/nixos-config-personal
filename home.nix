@@ -50,6 +50,9 @@
       "hyprland/workspaces" = {
         "active-only" = false;
       };
+      "wlr/taskbar" = {
+        "on-click" = "activate";
+      };
     }];
   };
 
