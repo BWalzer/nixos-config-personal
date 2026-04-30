@@ -35,7 +35,7 @@
     settings = {
       mainBar = {
         modules-left = [ "clock" ];
-        modules-center = [ "workspaces" ];
+        modules-center = [ "hyprland/workspaces" ];
       };
     };
   };
