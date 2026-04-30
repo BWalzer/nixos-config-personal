@@ -57,6 +57,31 @@
     theme = "catppuccin-mocha";
   };
 
+  # Point SDDM's KWin compositor at the primary display (DP-5 ultrawide)
+  system.activationScripts.sddm-kwin-output = lib.mkAfter ''
+    mkdir -p /var/lib/sddm/.config
+    cat > /var/lib/sddm/.config/kwinoutputconfig.json <<'EOF'
+{
+  "outputs": [
+    {
+      "outputName": "DP-5",
+      "enabled": true,
+      "priority": 1,
+      "scale": 1.0,
+      "transform": 0,
+      "position": {"x": 0, "y": 0},
+      "mode": {"width": 3440, "height": 1440, "refreshRate": 240085}
+    },
+    {
+      "outputName": "DP-4",
+      "enabled": false
+    }
+  ]
+}
+EOF
+    chown sddm:sddm /var/lib/sddm/.config/kwinoutputconfig.json
+  '';
+
   environment.systemPackages = [ pkgs.catppuccin-sddm ];
 
   # Audio
