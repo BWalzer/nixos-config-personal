@@ -33,7 +33,9 @@
   programs.waybar = {
     enable = true;
     settings = {
-      modules-left = [ "simpleclock" ];
+      mainBar = {
+        modules-left = [ "simpleclock" ];
+      };
     };
   };
 
