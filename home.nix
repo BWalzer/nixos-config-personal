@@ -41,6 +41,9 @@
 	"calendar" = {
           mode = "year";           # Show the whole year
 	  "mode-mon-col" = 3;      # Show 3 months per row
+          format = {
+	    today = "<span color='#ff6699'><b><u>{}</u></b></span";
+	  };
 	};
       };
     }];
