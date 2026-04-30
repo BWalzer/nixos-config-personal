@@ -38,7 +38,7 @@
         modules-center = [ "hyprland/workspaces" "wlr/taskbar" ];
       };
       "clock" = {
-        "format" = "{%A}";
+        "format" = "{:%A}";
       };
     };
   };
