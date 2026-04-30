@@ -34,7 +34,7 @@
     enable = true;
     settings = {
       mainBar = {
-        modules-left = [ "simpleclock" ];
+        modules-left = [ "clock" ];
       };
     };
   };
