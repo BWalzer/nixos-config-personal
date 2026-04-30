@@ -53,8 +53,10 @@
   
   programs.regreet = {
     enable = true;
-    default_session = {
-      command = "uwsm start hyprland-uwsm.desktop";
+    settings = {
+      default_session = {
+        command = "uwsm start hyprland-uwsm.desktop";
+      };
     };
   };
 
