@@ -38,6 +38,7 @@
       clock = {
         "format" = "{:%A, %B %-d - %H:%M}"; # Ex. Thursday, November 12 - 14:02 PST
       };
+    }];
   };
 
   programs.ghostty = {
