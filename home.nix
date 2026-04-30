@@ -31,6 +31,7 @@
   };
 
   programs.waybar.enable = true;
+  stylix.targets.waybar.enable = false;
 
   programs.ghostty = {
     enable = true;
