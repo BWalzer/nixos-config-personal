@@ -46,10 +46,11 @@
 	  };
 	};
       };
-    }];
+
       "hyprland/workspaces" = {
         "active-only" = false;
       };
+    }];
   };
 
   programs.ghostty = {
