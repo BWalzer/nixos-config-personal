@@ -117,10 +117,6 @@
       light = "Papirus-Light";
       dark = "Papirus-Dark";
     };
-
-    targets = {
-      waybar.enable = true;
-    };
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
