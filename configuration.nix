@@ -51,7 +51,13 @@
     withUWSM = true;
   };
   
-  programs.regreet.enable = true;
+  programs.regreet = {
+    enable = true;
+    default_session = {
+      command = "uwsm start hyprland-uwsm.desktop";
+    };
+  };
+
 
   # Audio
   services.pipewire = {
