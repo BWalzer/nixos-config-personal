@@ -40,7 +40,7 @@
         "tooltip-format" = "<tt>{calendar}</tt>";
 	"calendar" = {
           mode = "year";           # Show the whole year
-	  "mode-mon-col" = 4;      # Show 4 months per row
+	  "mode-mon-col" = 3;      # Show 3 months per row
 	};
       };
     }];
