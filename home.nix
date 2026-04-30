@@ -30,7 +30,12 @@
     EDITOR = "nvim";
   };
 
-  programs.waybar.enable = true;
+  programs.waybar {
+    enable = true;
+    settings = {
+      modules-left = [ "simpleclock" ];
+    };
+  };
 
   programs.ghostty = {
     enable = true;
