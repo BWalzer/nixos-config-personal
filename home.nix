@@ -36,7 +36,7 @@
       modules-left = [ "clock" ];
       modules-center = [ "hyprland/workspaces" "wlr/taskbar" ];
       clock = {
-        "format" = "{:%A, %B %-d - %H:%M}"; # Ex. Thursday, November 12 - 14:02 PST
+        "format" = "{:%A, %B %e - %H:%M}"; # Ex. Thursday, November 12 - 14:02 PST
       };
     }];
   };
