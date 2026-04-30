@@ -38,6 +38,10 @@
       clock = {
         "format" = "{:%A, %B %e - %H:%M}"; # Ex. Thursday, November 12 - 14:02 PST
         "tooltip-format" = "<tt>{calendar}</tt>";
+	"calendar" = {
+          mode = "year";           # Show the whole year
+	  "mode-mon-col" = 4;      # Show 4 months per row
+	};
       };
     }];
   };
