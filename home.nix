@@ -27,6 +27,7 @@
     nerd-fonts.jetbrains-mono
     waybar
     bolt-launcher
+    runelite                   # This is added with bolt-launcher, but adding it here for the .desktop file
   ];
 
   home.sessionVariables = {
