@@ -32,15 +32,13 @@
 
   programs.waybar = {
     enable = true;
-    settings = {
-      mainBar = {
-        modules-left = [ "clock" ];
-        modules-center = [ "hyprland/workspaces" "wlr/taskbar" ];
-      };
-      "clock" = {
+    settings = [{
+      modules-left = [ "clock" ];
+      modules-center = [ "hyprland/workspaces" "wlr/taskbar" ];
+      clock = {
         "format" = "{:%A}";
       };
-    };
+    }];
   };
 
   programs.ghostty = {
