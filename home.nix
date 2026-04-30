@@ -48,8 +48,11 @@
       };
 
       "hyprland/workspaces" = {
-        "active-only" = false;
+	"active-only" = false;
+        format = "{id} {windows}";
+	"window-rewrite-default" = "{class}";
       };
+
       "wlr/taskbar" = {
         "on-click" = "activate";
       };
