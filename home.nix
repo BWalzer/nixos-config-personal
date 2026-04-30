@@ -35,7 +35,7 @@
     settings = {
       mainBar = {
         modules-left = [ "clock" ];
-        modules-center = [ "hyprland/workspaces" "hyprland/submap" ];
+        modules-center = [ "hyprland/workspaces" "wlr/taskbar" ];
       };
     };
   };
