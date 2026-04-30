@@ -53,6 +53,8 @@
 
       "wlr/taskbar" = {
         "on-click" = "activate";
+	"on-click-middle" = "minimize";
+	"on-click-right" = "close";
       };
     }];
   };
