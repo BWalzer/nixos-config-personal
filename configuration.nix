@@ -54,7 +54,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    theme = "catppuccin-mocha";
+    theme = "catppuccin-mocha-mauve";
   };
 
   # Point SDDM's KWin compositor at the primary display (DP-5 ultrawide)
@@ -134,7 +134,6 @@ EOF
   # stylix
   stylix = {
     enable = true;
-    targets.sddm.enable = false;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     image = ./wallpaper.png;
     cursor = {
