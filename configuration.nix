@@ -53,6 +53,7 @@
   
   programs.regreet = {
     enable = true;
+    extraPackages = [ pkgs.hyprland ];
     settings = {
       default_session = {
         command = "uwsm start hyprland-uwsm.desktop";
