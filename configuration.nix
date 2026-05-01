@@ -109,6 +109,7 @@
   # stylix
   stylix = {
     enable = true;
+    wayland.enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     image = ./wallpaper.png;
     cursor = {
