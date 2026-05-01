@@ -46,21 +46,17 @@
 
   programs.fish.enable = true;
 
-  programs.hyprland = {
-    enable = true;
+  programs.hyprland = { enable = true;
     withUWSM = true;
   };
   
-  programs.regreet = {
+  services.displayManager.sddm = {
     enable = true;
-    settings = {
-      default_session = {
-        command = "uwsm start hyprland-uwsm.desktop";
-      };
-    };
+    wayland.enable = true;
+    package = pkgs.kdePackages.sddm;
   };
 
-  systemd.services.greetd.environment.XDG_DATA_DIRS = "/run/current-system/sw/share";
+  services.displayManager.sessionPackages = [ pkgs.hyprland ];
 
 
   # Audio
@@ -127,6 +123,8 @@
       light = "Papirus-Light";
       dark = "Papirus-Dark";
     };
+
+    targets.sddm.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
