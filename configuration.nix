@@ -53,13 +53,14 @@
   
   programs.regreet = {
     enable = true;
-    extraPackages = [ pkgs.hyprland ];
     settings = {
       default_session = {
         command = "uwsm start hyprland-uwsm.desktop";
       };
     };
   };
+
+  systemd.services.greetd.environment.XDG_DATA_DIRS = "/run/current-system/sw/share";
 
 
   # Audio
