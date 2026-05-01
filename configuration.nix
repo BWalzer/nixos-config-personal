@@ -54,7 +54,6 @@
     enable = true;
     wayland.enable = true;
     package = pkgs.kdePackages.sddm;
-    theme = "breeze";
   };
 
   services.displayManager.sessionPackages = [ pkgs.hyprland ];
@@ -124,7 +123,6 @@
       light = "Papirus-Light";
       dark = "Papirus-Dark";
     };
-    targets.sddm.enable = lib.mkForce true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
