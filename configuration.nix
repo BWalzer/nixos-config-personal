@@ -123,6 +123,8 @@
       light = "Papirus-Light";
       dark = "Papirus-Dark";
     };
+
+    theme = "breeze";
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
