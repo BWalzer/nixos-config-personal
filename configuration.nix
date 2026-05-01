@@ -124,8 +124,6 @@
       light = "Papirus-Light";
       dark = "Papirus-Dark";
     };
-
-    targets.sddm.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
