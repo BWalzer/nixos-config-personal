@@ -24,6 +24,7 @@
     waybar
     bolt-launcher
     runelite                   # This is added with bolt-launcher, but adding it here for the .desktop file
+    mgba
   ];
 
   home.sessionVariables = {
@@ -114,7 +115,7 @@
     };
   };
 
-
+  # Gaming
   programs.lutris = {
     enable = true;
     extraPackages = with pkgs; [ winetricks mangohud gamemode ];
