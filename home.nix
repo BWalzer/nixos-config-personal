@@ -31,6 +31,12 @@
     EDITOR = "nvim";
   };
 
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    flake = "/home/benw/nixos-config";
+  };
+
   programs.waybar = {
     enable = true;
     settings = [{
